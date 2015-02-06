@@ -1,8 +1,12 @@
 require 'bundler/setup'
+require "rubygems"
 
-require 'sinatra'
+require "sinatra/base"
 
-get '/' do
-  haml :index
+class MyApp < Sinatra::Base
+
+  get '/' do
+    haml :index
+  end
+
 end
-
