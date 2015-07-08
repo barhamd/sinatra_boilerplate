@@ -1,11 +1,9 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'bundler/setup'
-require 'sinatra'
-require 'pry'
+class MyApp < Sinatra::Base
 
+  get '/' do
+    haml :index
+  end
 
-get '/' do
-  haml :index
 end
